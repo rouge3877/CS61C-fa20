@@ -5,7 +5,7 @@
 1. How do computer processors and memories work, and how do they affect software design and performance?
 2. Introduction to “computer systems” areas: architecture, compilers, security, embedded, operating systems, large-scale computing
 
-![70550357001](E:\onedriveXJTU\OneDrive - 西安交通大学\CS61C-su20\Note\IMAGE\lec01-1.png)
+![lec01-1](./assets/lec01-1.png)
 
 ### Six Great Idea
 

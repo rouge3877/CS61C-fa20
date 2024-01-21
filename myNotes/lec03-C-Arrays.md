@@ -31,7 +31,8 @@ struct hello{
 };
 ```
 
-**!`sizeof(struct hello) = 16`:**![70563615153](E:\onedriveXJTU\OneDrive - 西安交通大学\CS61C-su20\Note\IMAGE\lec03-1.png)
+**!`sizeof(struct hello) = 16`:**
+![lec03-1](./assets/lec03-1.png)
 
 * <u>***QUESTION!?*** why there is padding between `b` and `c`, to alignment, I think it should be `4 bytes` for a small element</u>
 * <u>***QUESTION!?*** why there is padding between `b` and `c`, to alignment, I think it should be `4 bytes` for a small element</u>
@@ -53,5 +54,5 @@ struct hello{
 
 **!`sizeof(struct hello) = 12`:**
 
-![70563636481](C:\Users\rouge\AppData\Local\Temp\1705636364811.png)
+![lec03-1](./assets/lec03-2.png)
 
