@@ -4,18 +4,25 @@
 void append_node (node** head_ptr, int new_data) {
 	/* First lets allocate memory for the new node and initialize its attributes */
 	/* YOUR CODE HERE */
-
+	node* new_node = (node*)malloc(sizeof(node));
+	if (new_node == NULL) {
+        printf("Memory allocation failed!");
+        exit(1);
+    }
+	new_node->next = NULL;
+	new_node->val = new_data;
 	/* If the list is empty, set the new node to be the head and return */
 	if (*head_ptr == NULL) {
 		/* YOUR CODE HERE */
+		*head_ptr = new_node;
 		return;
 	}
 	node* curr = *head_ptr;
-	while (/* YOUR CODE HERE */ != NULL) {
+	while (curr->next != NULL) {
 		curr = curr->next;
 	}
 	/* Insert node at the end of the list */
-	/* YOUR CODE HERE */
+	curr->next = new_node;
 }
 
 /* Reverse a linked list in place (in other words, without creating a new list).
