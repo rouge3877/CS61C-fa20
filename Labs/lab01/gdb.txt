@@ -1,9 +1,9 @@
-1.
-2.
-3.
-4.
-5.
-6.
-7.
-8.
-9.
+1. use `run [arglist]`
+2. use `b main` to add a breakpoint at main() function
+3. use `next`
+4. use `step`
+5. use `continue`
+6. use `print [expression]` or `display [expression]` to auto print
+7. use `display [expression]` 
+8. use `info local`
+9. exit
