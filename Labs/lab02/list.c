@@ -33,9 +33,13 @@ void reverse_list (node** head_ptr) {
 	node* next = NULL;
 	while (curr != NULL) {
 		/* INSERT CODE HERE */
+		prev = curr;
+		curr = curr->next;
+		prev->next = next;
+		next = prev;
 	}
 	/* Set the new head to be what originally was the last node in the list */
-	*head_ptr = /* INSERT CODE HERE */
+	*head_ptr = prev;
 }
 
 
