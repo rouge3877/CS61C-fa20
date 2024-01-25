@@ -1,4 +1,4 @@
-# Lecture02-C Intro
+# Lecture02 C Intro
 
 ## 1. C Basic (Filling in the gaps)
 

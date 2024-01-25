@@ -1,4 +1,4 @@
-# Lecture01-Number Representation
+# Lecture01 Number Representation
 
 ## 1. Course Overview
 
@@ -18,9 +18,9 @@
 
 ## 2. Number Representation 
 
-***Bits Can Represent ANYTHING***
+***🏆 Bits Can Represent ANYTHING***
 
-***n digits (base B) --->  <= B^n things***
+***🏆 n digits (base B) $\to\,\,\,\,\le B^n$ things***
 
 * Each of the n digits is one of B possible symbols
 * Have more things? Add more digits! 
@@ -45,7 +45,7 @@
 
 * **One’s Complement**: New negation procedure – complement the bits
 
-* **Two’s Complement**: Like One’s Complement, but “shift” negative #s by 1
+* **🏆 Two’s Complement**: Like One’s Complement, but “shift” negative #s by 1
 
   * Expect the normal way, we can find that: 
 

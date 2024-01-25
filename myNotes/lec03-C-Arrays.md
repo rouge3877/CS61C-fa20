@@ -1,4 +1,4 @@
-# Lecture03-C Arrays and Strings
+# Lecture03 C Arrays and Strings
 
 ## 1 Operator
 

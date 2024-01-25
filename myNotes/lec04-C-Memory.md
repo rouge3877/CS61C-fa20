@@ -1,4 +1,4 @@
-# Lecture04-C Memory
+# Lecture04 C Memory
 
 ## 1. Memory Layout
 
