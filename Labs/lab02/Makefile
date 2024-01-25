@@ -48,3 +48,7 @@ clean:
 
 vector.c: vector.h
 vector_test.c: vector.h
+
+$(VECTOR_PROG): $(VECTOR_OBJS)
+
+$(VECTOR_OBJS): vector_test.c vector.c
