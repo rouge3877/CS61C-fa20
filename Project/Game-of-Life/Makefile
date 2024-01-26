@@ -33,16 +33,16 @@ steganographymemcheck:  steganography
 	valgrind $(VGFLAGS) ./steganography testInputs/JohnConway.ppm > studentOutputs/secretMessage.ppm
 
 gameoflife: imageloader.o gameoflife.o
-	$(CC) $(LDFLAGS) -o gameOfLife gameoflife.o imageloader.o
-	echo "Successfully compiled"
-	echo "Run ./frames.csh for various tests"
+	@$(CC) $(LDFLAGS) -o gameOfLife gameoflife.o imageloader.o
+	@echo "Successfully compiled"
+	@echo "Run ./frames.csh for various tests"
 
 gameoflifememcheck: gameoflife
-	valgrind $(VGFLAGS) ./gameOfLife testInputs/JohnConway.ppm 0x1808 > studentOutputs/temp.ppm
+	@valgrind $(VGFLAGS) ./gameOfLife testInputs/JohnConway.ppm 0x1808 > studentOutputs/temp.ppm
 
 
 %.o: %.c
-	$(CC) $(CFLAGS) $<
+	@$(CC) $(CFLAGS) $<
 
 clean:
 	rm -f *.o
