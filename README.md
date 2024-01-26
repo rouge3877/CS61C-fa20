@@ -1,15 +1,21 @@
 # CS 61C: Great Ideas in Computer Architecture
 
+*by Rouge Lin, on the begining of 2024, which is a chilly winter*
+
 ## Description
 * This repository records the self-study materials and assignments for the **CS 61C**. I use the [2020 summer](https://inst.eecs.berkeley.edu/~cs61c/su20/) version and [2020 fall](https://inst.eecs.berkeley.edu/~cs61c/fa20/) version because it open-sourced the lecture videos.
 
-* This repository refers to https://github.com/PKUFlyingPig/CS61C-summer20. 
+* This repository refers to [PKUFlyingPig's CS61C repo](https://github.com/PKUFlyingPig/CS61C-summer20).
 
-* I need to first declare that the repository's name is CS61C-fa20, so Most of the [projects](https://inst.eecs.berkeley.edu/~cs61c/fa20/#projects) I have worked and Lecture vedios I learned comes from fa2020. 
+* Labs and Projects Starter comes from [61c-teach](https://github.com/61c-teach/)
 
-    * But In addition #1, lab#01 and lab#02, are based on [CS61C-su20](https://inst.eecs.berkeley.edu/~cs61c/su20/#labs)
+* I need to  declare that the repository's name is CS61C-fa20
 
-    * In addition #2, except Discussion#01 and Discussion#02 are based on [CS61C-su20](https://inst.eecs.berkeley.edu/~cs61c/su20/#discussions)
+    * But In addition #1: lab#01 and lab#02, are based on [CS61C-su20](https://inst.eecs.berkeley.edu/~cs61c/su20/#labs)
+
+    * But In addition #2: except Discussion#01 and Discussion#02 are based on [CS61C-su20](https://inst.eecs.berkeley.edu/~cs61c/su20/#discussions)
+
+
 
 ## Repo Structure
 ```
