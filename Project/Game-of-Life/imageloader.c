@@ -10,7 +10,7 @@
 **				Rouge Lin
 **
 **
-** DATE:        2020-08-15
+** DATE:        2024-01-26
 **
 **************************************************************************/
 
@@ -30,7 +30,7 @@ Image *readData(char *filename)
 	retval->image = NULL;
 	if(!retval){
     	fprintf(stderr, "Out of memory.\n");
-    	exit(1);
+    	exit(-1);
 	}
 
 	// open Img file
@@ -38,7 +38,7 @@ Image *readData(char *filename)
 	if(!fp){
 		free(retval);
     	fprintf(stderr, "Open file failed.\n");
-    	exit(1);
+    	exit(-1);
 	}
 
 	// read header and check format
@@ -48,13 +48,13 @@ Image *readData(char *filename)
 		free(retval);
 		fclose(fp);
 		fprintf(stderr, "Error when read file.\n");
-    	exit(1);
+    	exit(-1);
 	}
 	if(strcmp(format, "P3")||(bits_length!=255)){
 		free(retval);
 		fclose(fp);
 		fprintf(stderr, "Error file format.\n");
-    	exit(1);
+    	exit(-1);
 	}
 
 	// allocate image memory and read pixels by pixels
@@ -63,7 +63,7 @@ Image *readData(char *filename)
 		free(retval);
 		fclose(fp);
 		fprintf(stderr, "Out of memory.\n");
-    	exit(1);
+    	exit(-1);
 	}
 	for(int i = 0; i < retval->cols * retval->rows; i++){
 		retval->image[i] = (Color*)calloc(3, sizeof(Color));
@@ -74,7 +74,7 @@ Image *readData(char *filename)
 			free(retval);
 			fclose(fp);
 			fprintf(stderr, "Out of memory.\n");
-			exit(1);
+			exit(-1);
 		}
 		if(fscanf(fp, "%" SCNu8 " %" SCNu8 " %" SCNu8" ", &(retval->image[i]->R), &(retval->image[i]->G), &(retval->image[i]->B))!=3){
 			for(int j = 0; j < i+1; j++)
@@ -83,7 +83,7 @@ Image *readData(char *filename)
 			free(retval);
 			fclose(fp);
 			fprintf(stderr, "Error when read file.\n");
-			exit(1);		
+			exit(-1);		
 		}
 	}
 
@@ -118,7 +118,7 @@ void freeImage(Image *image)
 		free(image);
 	else{
 		for(int i = 0; i < image->cols * image->rows; i++){
-			if(!image->image[i])
+			if(image->image[i])
 				free(image->image[i]);
 		}
 		free(image->image);
