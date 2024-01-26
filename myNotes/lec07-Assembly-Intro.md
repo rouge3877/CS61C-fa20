@@ -20,7 +20,7 @@
     * Let software do the complicated operations by composing simpler ones
 
 ### 1.2 Mainstream Instruction Set Architectures
-![lec07-1](./assets/lec06-1.png)
+![lec07-1](./assets/lec07-1.png)
 
 ## 2. Registers
 * Unlike C, assembly doesn’t have variables as you know them
@@ -46,7 +46,7 @@
 
 * **🏆 *Principle of Locality/Memory Hierarchy***
   
-    ![lec07-2](./assets/lec06-2.png)
+    ![lec07-2](./assets/lec07-2.png)
 
 ### 2.2 Number of Registers and RISC-V's Registers
 * Should Tradeoff between speed and availability
@@ -70,7 +70,7 @@
 
 ### 2.4 Registers in a Computer
 * For ***any*** Computer, it has: 
-    ![lec07-3](./assets/lec06-3.png)
+    ![lec07-3](./assets/lec07-3.png)
     * Control
     * Datapath
     * Memory
