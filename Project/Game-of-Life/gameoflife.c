@@ -45,7 +45,6 @@ uint8_t getState(Image *image, int row, int col){
 	return retval;
 }
 
-
 //Determines what color the cell at the given row/col should be. This function allocates space for a new Color.
 //Note that you will need to read the eight neighbors of the cell in question. The grid "wraps", so we treat the top row as adjacent to the bottom row
 //and the left column as adjacent to the right column.
@@ -57,7 +56,7 @@ Color *evaluateOneCell(Image *image, int row, int col, uint32_t rule)
     	exit(-1);
 	}
 
-	// Get the state of current pixel
+	// Get the state of current pixel and Calculate the next state
 	uint8_t _dead_0_or_live_1_ = getState(image, row, col);
 	uint8_t alive_neighbors = 0;
 	alive_neighbors += getState(image, row - 1, col - 1);
@@ -68,6 +67,8 @@ Color *evaluateOneCell(Image *image, int row, int col, uint32_t rule)
 	alive_neighbors += getState(image, row + 1, col - 1);
 	alive_neighbors += getState(image, row + 1, col - 0);
 	alive_neighbors += getState(image, row + 1, col + 1);
+	uint32_t _1_bit = 1;
+	uint8_t next_state = ((rule >> (9 * _dead_0_or_live_1_ + alive_neighbors)) & _1_bit); // !!Transition state function!!
 
 	// Allocate space of return color
 	Color* retval = (Color*)malloc(sizeof(Color));
@@ -76,9 +77,7 @@ Color *evaluateOneCell(Image *image, int row, int col, uint32_t rule)
     	exit(-1);
 	}
 
-	// Calculate and assign the next state
-	uint32_t _1_bit = 1;
-	uint8_t next_state = ((rule >> (9 * _dead_0_or_live_1_ + alive_neighbors)) & _1_bit);
+	// Assign the next state color
 	if(next_state == 1)
 		retval->R = retval->G = retval->B = 255;
 	else
