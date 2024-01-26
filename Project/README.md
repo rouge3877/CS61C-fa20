@@ -16,7 +16,9 @@ But is pity that i do not implement the [Multiple Colors](https://inst.eecs.berk
 
 ### Usage
 
-After `make gameoflife`, you can run ./frames.csh as follows :
+*Is no doubt that you should `cd Game-of-Life` at first* :D
+
+After `make gameoflife`to compile, you can run ./frames.csh as follows :
 ```bash
 ./frames.csh <imagename> <rule> <frames>
 ```
