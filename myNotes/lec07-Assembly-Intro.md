@@ -1,12 +1,13 @@
-# Lecture06 Assembly Intro
+# Lecture07 Assembly Intro
 
-## 1. Background
+* Assembly is A low-level programming language where the program instructions match a **<u>particular architecture’s</u>** operations. *So is no doubt that it's **not portable** to other architectures (unlike C is)*
 
-* A low-level programming language where the program instructions match a **particular architecture’s** operations
+* The set of instructions a particular CPU implements is an ***<u>Instruction set Architecture (ISA)</u>***,  ( Each architecture will have a different set of operations that it supports ,*although there are many similarities*)
+    * ARM
+    * X86-64
+    * ...
 
-* Each architecture will have a different set of operations that it supports (although there are many similarities)
-
-* Assembly is **not portable** to other architectures (unlike C is)
+## 1. Background and Introduction
 
 ### 1.1 Complex/Reduced Instruction Set Computing
 * Early trend: add more and more instructions to do elaborate operations: **Complex Instruction Set Computing (CISC)** 
@@ -19,7 +20,7 @@
     * Let software do the complicated operations by composing simpler ones
 
 ### 1.2 Mainstream Instruction Set Architectures
-![lec06-1](./assets/lec06-1.png)
+![lec07-1](./assets/lec06-1.png)
 
 ## 2. Registers
 * Unlike C, assembly doesn’t have variables as you know them
@@ -45,7 +46,7 @@
 
 * **🏆 *Principle of Locality/Memory Hierarchy***
   
-    ![lec06-2](./assets/lec06-2.png)
+    ![lec07-2](./assets/lec06-2.png)
 
 ### 2.2 Number of Registers and RISC-V's Registers
 * Should Tradeoff between speed and availability
@@ -69,7 +70,7 @@
 
 ### 2.4 Registers in a Computer
 * For ***any*** Computer, it has: 
-    ![lec06-3](./assets/lec06-3.png)
+    ![lec07-3](./assets/lec06-3.png)
     * Control
     * Datapath
     * Memory
