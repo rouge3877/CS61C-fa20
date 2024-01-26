@@ -27,7 +27,7 @@
 * Instead, assembly uses **registers** to store values, and Registers are:
     * Small memories of a **fixed size** (32/64-bit in our system)
     * Can be **read** or **written**
-    * **Limited in number** (there are 32/64 registers on our system)
+    * **Limited in number** (there are 32 registers on our system)
     * Very **fast** and **low power** to access
 * SO, In high-level languages (like C), number of variables **limited only by available memory**
 * Assembly have a **fixed**, **small number** of operands called **registers** (which is a Special locations built directly into hardware)
@@ -79,7 +79,7 @@
 
 * Registers are part of the Datapath
 
-## 3. RISCV Instructions
+## 3. RISC-V Instructions
 * Instruction Syntax is rigid, to Keep hardware simple via regularity (1 operator, 3 operands)
     ```assembly
     op dst, src1, src2
@@ -96,22 +96,13 @@ add, sub,
 
 
 ### 3.2 Immediate Instructions
+* Immediates are numerical constants
+* add immediate:
 
+    `addi x3, x4, 10` 
+* we don't need socall `sub immediate`, because sub 10 equals to add -10
 
+    `addi x3, x4, 10`
 
-### 3.3 Data Transfer Instructions
-
-
-
-### 3.4 Control Flow Instructions
-
-
-
-### 3.5 Shifting Instructions
-
-
-
-### 3.6 Other useful Instructions
-
-
-
+* Register 0: **Register which id is `x0` is *'hard-wired'* to 0**
+    * Nothing will happen if we do: `add x0, x3, x4`
